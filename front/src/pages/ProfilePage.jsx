@@ -1,9 +1,12 @@
-import {Link } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 
 export default function ProfilePage() {
+  const data = useLoaderData();
+  console.log(data);
     return (
-      <div>
-        <Link to="/">Return to Home</Link>
+      <div>Profile Page
       </div>
     );
   }
+
+
