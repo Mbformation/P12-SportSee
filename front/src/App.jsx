@@ -5,6 +5,7 @@ import './styles.css';
 function App() {
   return (
     <RouterProvider router={router} />
+    //<div className="modale"></div> REGARDER REACT FRAGMENT
   );
 }
 
