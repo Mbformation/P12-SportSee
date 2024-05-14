@@ -8,12 +8,45 @@
          url('./assets/fonts/Roboto/Roboto-Bold.ttf') format ('truetype');
   }
 
+/* General */
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     margin: 0;
 }
 
+/* Sign in Page */
+.sign-in {
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #282D30;
+}
+
+.sign-in svg {
+    width: 300px;
+    padding-bottom: 100px;
+}
+
+.sign-in .sign-in-links {
+    display: flex;
+    gap: 50px;
+}
+
+.sign-in .sign-in-links a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 28px;
+}
+
+
+
+/* Layout */
 .layout-wrapper {
     box-sizing: border-box;
     margin: 0 auto;
@@ -25,6 +58,7 @@ header {
     color: white;
     display: flex;
     padding-left: 30px;
+    padding-top: 10px;
 }
 
 header svg {
@@ -59,3 +93,302 @@ nav li a {
     font-size: 18px;
 }
 
+.main-wrapper {
+    display: flex;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #020203;
+    padding: 5px 15px 5px 15px;
+}
+
+.sidebar .buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    padding-top: 140px;
+}
+
+.sidebar .buttons-wrapper button {
+    padding: 0;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+}
+
+.sidebar button img {
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+}
+
+.sidebar p {
+    margin: 0;
+    color: white;
+    font-size: 12px;
+    rotate: 270deg;
+    padding: 5px 5px;
+    writing-mode: tb;
+    transform: rotate(-90deg);
+}
+
+
+/* Profile Page */
+
+.profile {
+    padding: 50px 50px 70px 50px;
+    flex-grow: 1;
+    border-top: 1px solid #020203;
+    border-right: none;
+    box-shadow: inset 0px 7px 7px -8px rgba(2, 2, 3, 1);
+}
+
+.profile .title {
+    margin: 0;
+}
+
+.profile > p {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 70px;
+}
+
+.profile .title .title-name {
+    color: #E60000;
+
+}
+
+.profile .stats-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.profile .graphs-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex-grow: 1;
+
+}
+
+.profile .bar-chart-container {
+    height: 300px;
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.profile .bar-chart-container .legend-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile .bar-chart-container .legend-container p {
+    color: #20253A;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.profile .bar-chart-container .legend-container ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 35px;
+}
+
+
+
+.profile ul li {
+    list-style: none;
+    font-size: 14px;
+    color: #74798C;
+}
+
+.profile .legend-item-weight::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: #282D30;
+}
+
+.profile .legend-item-calories::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #E60000;
+}
+
+.profile .cubic-charts-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-grow: 1;
+    height: 263px;
+}
+
+.profile .line-chart-container {
+    background-color: #FF0000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    width: 30%;
+    max-width: 250px;
+}
+
+.profile .line-chart-container .legend-container {
+    padding-left: 40px;
+    font-size: 16px;
+}
+
+.profile .line-chart-container .legend-container p {
+    padding-top: 15px;
+    
+}
+
+.profile .radar-chart-container {
+    border-radius: 5px;
+    background-color: #282D30;
+    width: 30%;
+    max-width: 250px;
+
+}
+
+.profile .radial-chart-container {
+    border-radius: 5px;
+    background-color: #FBFBFB;
+    position: relative;
+    width: 30%;
+    max-width: 250px;
+
+}
+
+.profile .radial-chart-container .title {
+    position:absolute;
+    font-size: 14px;
+    font-weight: bold;
+    color: #282D30;
+    top: 30px;
+    left: 30px;
+}
+
+.profile .radial-chart-container .legend-container {
+    display: flex;
+    justify-content: center;
+}
+
+.profile .radial-chart-container .legend {
+    font-size: 17px;
+    color: #9B9EAC;
+    width: 70px;
+    line-height: 1.5;
+    text-align: center;
+    border-radius: 50%;
+    padding: 30px 38px 30px 38px;
+    background-color: white;
+}
+
+.profile .radar-chart-container .legend span {
+    font-size: 20px;
+    color: #282D30;
+}
+.recharts-layer.recharts-polar-angle-axis-ticks > g:nth-child(1) {
+    transform: translateY(-10px);
+}
+.recharts-layer.recharts-polar-angle-axis-ticks > g:nth-child(4) {
+    transform: translateY(15px);
+}
+
+.profile .food-kpis-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 260px;
+}
+
+.profile .keydata-container {
+    display: flex;
+    background-color: #FBFBFB;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 30px 30px 30px;
+}
+
+.profile .keydata-container .icon-container {
+    width: 60px;
+    height: 60px;
+    align-content: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.profile .keydata-container .icon-container-energy {
+    background-color: rgba(255, 0, 0, 0.07);  
+}
+
+.profile .keydata-container .icon-container-protein {
+    background-color: rgba(74, 184, 255, 0.1)
+}
+
+.profile .keydata-container .icon-container-carbs {
+    background-color:rgba(249, 206, 35, 0.10);
+}
+
+.profile .keydata-container .icon-container-fat {
+    background-color: rgba(253, 81, 129, 0.10)
+}
+
+
+.profile .keydata-container .content {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6rem;
+}
+
+.profile .keydata-container .value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #282D30;
+}
+.profile .keydata-container .name { 
+    font-size: 14px;
+    font-weight: bold;
+    color: #9B9EAC;
+}
+
+
+/* Error Page */
+.error-page {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+@media screen and (max-width: 1280px) {
+  .profile .stats-container {
+    flex-direction: column-reverse;
+  }
+
+  .profile .food-kpis-container {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+  
