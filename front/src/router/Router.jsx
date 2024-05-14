@@ -27,7 +27,7 @@ const router = createBrowserRouter([
                     getMainData:`http://localhost:4000/user/${params.userId}`,
                 }
             );
-            return USER_MAIN_DATA // TODO
+            return USER_MAIN_DATA
             
         },
         errorElement: <NotFoundPage />,
