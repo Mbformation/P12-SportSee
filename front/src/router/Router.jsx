@@ -19,6 +19,8 @@ function createRouter(getMainData, getProfileData) {
     {
       path: "/",
       element: <LandingPage />,
+      // en cas d'erreur redirection vers la page NotFound
+      errorElement: <NotFoundPage />,
     },
     // route pour la page utilisateur
     {
@@ -46,8 +48,6 @@ function createRouter(getMainData, getProfileData) {
               performance: `http://localhost:4000/user/${params.userId}/performance`,
             });
           },
-          // en cas d'erreur redirection vers la page notFound
-          errorElement: <NotFoundPage />,
         },
         {
           path: "settings",
@@ -56,14 +56,6 @@ function createRouter(getMainData, getProfileData) {
         {
           path: "community",
           element: <CommunityPage />,
-        },
-        {
-          path: "notfound",
-          element: <NotFoundPage />,
-        },
-        {
-          path: "*",
-          element: <NotFoundPage />,
         },
       ],
     },

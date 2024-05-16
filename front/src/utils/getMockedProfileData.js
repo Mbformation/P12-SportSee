@@ -248,7 +248,7 @@ export const getMockedProfileData = (data) => {
         },
       ]);
     } else {
-      reject(new Error("Invalid user ID"));
+      reject(new Response("error", { status: 404 }));
     }
   });
 };
