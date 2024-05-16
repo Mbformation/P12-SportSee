@@ -11,10 +11,12 @@ import energy from "../assets/icons/energy.svg";
 import protein from "../assets/icons/protein.svg";
 import carbs from "../assets/icons/carbs.svg";
 import fat from "../assets/icons/fat.svg";
+
+// Composant pour l'onglet profil de l'utilisateur
 export default function ProfilePage() {
-  const userData = formatUserInfo(useOutletContext().userData[0].data);
-  const userScore = userData.score * 100;
-  const graphData = useLoaderData();
+  const userData = formatUserInfo(useOutletContext().userData[0].data); // on récupère les données du composant layout
+  const userScore = userData.score * 100; // transformer le score en pourcentage
+  const graphData = useLoaderData(); // on récupère les données du router
   const userPerformance = formatPerformance(graphData[2]);
   return (
     <div className="profile">
