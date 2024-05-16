@@ -1,3 +1,4 @@
+// Fonction utils pour recuperer les informations des utilisateurs
 export const getUserInfo = async (data) => {
   const endpoints = Object.values(data);
   const fetchedData = await Promise.all(

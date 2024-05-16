@@ -1,12 +1,10 @@
 import { RouterProvider } from "react-router-dom";
-import router from "./router/Router.jsx"
-import './styles.css';
+import router from "./router/Router.jsx";
+import "./styles.css";
 
+// App est le composant racine de l'application
 function App() {
-  return (
-    <RouterProvider router={router} />
-    //<div className="modale"></div> REGARDER REACT FRAGMENT
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

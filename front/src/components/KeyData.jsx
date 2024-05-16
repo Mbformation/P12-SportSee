@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 
+// Composant représentant les cards de l'utilisateur
+// Les données des cartes sont les principaux nutriments consommés et la valeur calorique globale
 export default function KeyData(props) {
     const {icon, name, KeyData} = props;
     const pathParts = icon.split('/');
@@ -17,6 +19,7 @@ export default function KeyData(props) {
     )
 }
 
+// Contrôle avec les proptypes pour le composant 
 KeyData.propTypes = {
     icon: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,

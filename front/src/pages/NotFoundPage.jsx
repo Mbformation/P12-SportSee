@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+
+// Composant pour la page notFound en cas d'erreur (api, url invalide)
 export default function NotFoundPage() {
   return (
     <div className="error-page">

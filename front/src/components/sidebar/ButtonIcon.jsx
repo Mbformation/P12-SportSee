@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 
+// Boutons composant la sidebar
+
 export default function ButtonIcon({icon}) {
     return (
       <button className="icon-wrapper">

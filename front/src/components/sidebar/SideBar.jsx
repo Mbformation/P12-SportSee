@@ -3,6 +3,8 @@ import Swimming from './../../assets/icons/swimming.svg';
 import Cycling from './../../assets/icons/cycling.svg';
 import Lifting from './../../assets/icons/lifting.svg';
 import ButtonIcon from './ButtonIcon.jsx';
+
+// Composant de la bar latérale 
 export default function SideBar() {
   return (
     <div className="sidebar">

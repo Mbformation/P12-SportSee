@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+
+// Componsant de la barre de navigation horizontale
 export default function NavBar() {
     return (
       <nav>

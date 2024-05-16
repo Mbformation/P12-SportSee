@@ -2,6 +2,8 @@ import {Link } from 'react-router-dom';
 import { ReactComponent as HeaderLogo } from '../assets/logo.svg';
 
 
+// Composant pour la page des liens vers les pages des utilisateurs
+
 export default function LandingPage() {
     return (
       <div className='sign-in'>

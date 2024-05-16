@@ -11,11 +11,17 @@ import {
 
 import PropTypes from 'prop-types';
 
+// ActivityChart est un diagramme recharts en double barres : une pour les kgs l'autre pour les calories
+// Axe y pour la valeur du poids et du nombre de calories brûlées
+// Axe x pour chaque jour d'une semaine
 export default function ActivityChart(props) {
+
+  // Date du jour est simplifiée par un nombre de 1 à 7 à afficher dans l'axe x
   const customXaxisContent = (value, index) => {
     return index + 1;
   }
 
+  // Affiche la légende avec un titre et description des barres
   const customLegendContent = () => {
     return (
       <div className="legend-container" style={{ marginBottom: '55px' }}>
@@ -28,6 +34,7 @@ export default function ActivityChart(props) {
     );
   };
 
+  // Affiche les valeurs de chaque paire de barres sur le hover
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
@@ -41,6 +48,7 @@ export default function ActivityChart(props) {
     return null;
   };
 
+  // Propriétés recharts pour le style du diagramme et exécution des fonctions custom
   return (
     <div className="bar-chart-container">
       <ResponsiveContainer width="100%" height="100%">
@@ -58,6 +66,7 @@ export default function ActivityChart(props) {
   );
 }
 
+// PropTypes pour le diagramme avec détail des données reçues obligatoires
 ActivityChart.propTypes = {
       data: PropTypes.arrayOf(
         PropTypes.shape({
