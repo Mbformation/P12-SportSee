@@ -12,8 +12,6 @@ import PropTypes from "prop-types";
 // PerformanceChart est un diagramme recharts de type radar
 export default function PerformanceChart(props) {
   const ticksList = translateSubject(props.data, translation); // traduction des props en français
-  console.log(props.data);
-  console.log(ticksList);
   const ticksOrder = [
     "Intensité",
     "Vitesse",

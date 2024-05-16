@@ -16,8 +16,6 @@ export default function ProfilePage() {
   const userScore = userData.score * 100;
   const graphData = useLoaderData();
   const userPerformance = formatPerformance(graphData[2]);
-  console.log(useOutletContext().userData[0].data);
-  console.log(userData);
   return (
     <div className="profile">
       <h1 className="title">
