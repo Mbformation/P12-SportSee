@@ -28,7 +28,6 @@ function createRouter(getMainData, getProfileData) {
         return getMainData({
           mainData: `http://localhost:4000/user/${params.userId}`,
         });
-        //return getMockedMainData(params.userId);
       },
       // en cas d'erreur redirection vers la page notFound
       errorElement: <NotFoundPage />,
@@ -46,7 +45,6 @@ function createRouter(getMainData, getProfileData) {
               averageSession: `http://localhost:4000/user/${params.userId}/average-sessions`,
               performance: `http://localhost:4000/user/${params.userId}/performance`,
             });
-            //return getMockedProfileData(params.userId);
           },
           // en cas d'erreur redirection vers la page notFound
           errorElement: <NotFoundPage />,
